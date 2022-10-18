@@ -10,7 +10,7 @@ public class VectorApplication {
         Locale.setDefault(Locale.US);
         Vector a = new Vector();
 
-        a.primeiroExercicio();
+        a.thirdExercise();
     }
 
 }
