@@ -2,7 +2,7 @@ package entities;
 import java.util.Scanner;
 
 public class Vector {
-    public void firstExercise() {
+    public static void firstExercise() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Quantos números você vai digitar? ");
         int quantity = sc.nextInt();
@@ -22,7 +22,7 @@ public class Vector {
         }
         sc.close();
     }
-    public void secondExercise(){
+    public static void secondExercise(){
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Quantos números você vai digitar? ");
@@ -51,7 +51,7 @@ public class Vector {
         sc.close();
     }
 
-    public void thirdExercise() {
+    public static void thirdExercise() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Quantas pessoas serão digitadas? ");
@@ -76,11 +76,12 @@ public class Vector {
 
         double heightSum = 0.0;
 
-        for (People value : people) {
-            heightSum += value.getHeight();
+        for (People person : people) {
+            heightSum += person.getHeight();
         }
 
         double heightAvg = heightSum / people.length;
+        System.out.printf("%n");
         System.out.printf("Altura média: %.2f\n", heightAvg);
 
         int lessThanSixteen = 0;
@@ -91,7 +92,7 @@ public class Vector {
                 lessThanSixteen += 1;
             }
         }
-
+        System.out.printf("%n");
         double percentage = 100.0 * lessThanSixteen / people.length;
         System.out.printf("Pessoas com menos de 16 anos: %.1f%%\n", percentage);
 

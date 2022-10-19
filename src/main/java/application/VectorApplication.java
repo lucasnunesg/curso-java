@@ -10,7 +10,6 @@ public class VectorApplication {
 
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
-        Vector a = new Vector();
 
         System.out.println("## Vectors Exercise List ##");
         System.out.println("1 - Negative Numbers Exercise");
@@ -20,9 +19,9 @@ public class VectorApplication {
         int exerciseNumber = sc.nextInt();
 
         switch (exerciseNumber) {
-            case 1 -> a.firstExercise();
-            case 2 -> a.secondExercise();
-            case 3 -> a.thirdExercise();
+            case 1 -> Vector.firstExercise();
+            case 2 -> Vector.secondExercise();
+            case 3 -> Vector.thirdExercise();
         }
 
     }
