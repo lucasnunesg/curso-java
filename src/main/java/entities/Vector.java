@@ -15,9 +15,9 @@ public class Vector {
 
         System.out.println("NÚMEROS NEGATIVOS:");
 
-        for (int i=0; i<vect.length; i++){
-            if (vect[i]<0) {
-                System.out.println(vect[i]);
+        for (int j : vect) {
+            if (j < 0) {
+                System.out.println(j);
             }
         }
         sc.close();
@@ -38,9 +38,9 @@ public class Vector {
 
         System.out.print("VALORES = ");
 
-        for (int i=0; i<vet.length; i++) {
-            System.out.printf(vet[i] + "   ");
-            sum += vet[i];
+        for (double v : vet) {
+            System.out.printf(v + "   ");
+            sum += v;
         }
 
         double avg = sum / vet.length;
@@ -76,8 +76,8 @@ public class Vector {
 
         double heightSum = 0.0;
 
-        for (int i=0; i<people.length; i++) {
-            heightSum += people[i].getHeight();
+        for (People value : people) {
+            heightSum += value.getHeight();
         }
 
         double heightAvg = heightSum / people.length;
@@ -85,20 +85,20 @@ public class Vector {
 
         int lessThanSixteen = 0;
 
-        for (int i=0; i<people.length; i++) {
-            int currentAge = people[i].getAge();
+        for (People person : people) {
+            int currentAge = person.getAge();
             if (currentAge < 16) {
                 lessThanSixteen += 1;
             }
         }
 
-        double percentage = (double) 100* lessThanSixteen / n;
+        double percentage = 100.0 * lessThanSixteen / people.length;
         System.out.printf("Pessoas com menos de 16 anos: %.1f%%\n", percentage);
 
-        for (int j=0; j<people.length; j++) {
-            int currentAge = people[j].getAge();
+        for (People person : people) {
+            int currentAge = person.getAge();
             if (currentAge < 16) {
-                String less = people[j].getName();
+                String less = person.getName();
                 System.out.println(less);
             }
         }
