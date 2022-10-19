@@ -12,9 +12,7 @@ public class People {
         this.height = height;
     }
 
-    public double getHeight() {
-        return height;
-    }
+    public double getHeight() { return height; }
 
     public int getAge() { return age; }
 
