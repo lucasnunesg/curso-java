@@ -15,6 +15,7 @@ public class VectorApplication {
         System.out.println("1 - Negative Numbers Exercise");
         System.out.println("2 - Sum and Average Exercise");
         System.out.println("3 - Age exercise");
+        System.out.println("4 - Boarding House (challenge)");
         System.out.print("Please select number of desired exercise: ");
         int exerciseNumber = sc.nextInt();
 
@@ -22,6 +23,7 @@ public class VectorApplication {
             case 1 -> Vector.firstExercise();
             case 2 -> Vector.secondExercise();
             case 3 -> Vector.thirdExercise();
+            case 4 -> Vector.fourthExercise();
         }
 
     }

@@ -1,4 +1,5 @@
 package entities;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Vector {
@@ -103,6 +104,34 @@ public class Vector {
                 System.out.println(less);
             }
         }
+        sc.close();
+    }
+
+    public static void fourthExercise() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("How many rooms will be rented? ");
+        int n = sc.nextInt();
+        BoardingHouse[] roomRegister = new BoardingHouse[10];
+
+        for (int i=1; i<=n; i++) {
+            System.out.println("Rent #" + i);
+            System.out.print("Name: ");
+            sc.nextLine();
+            String name = sc.nextLine();
+            System.out.print("Email: ");
+            String email = sc.next();
+            System.out.print("Room: ");
+            int roomNumber = sc.nextInt();
+
+            roomRegister[roomNumber] = new BoardingHouse(name, email);
+        }
+        System.out.println("Busy rooms:");
+        for (BoardingHouse room: roomRegister) {
+            if (room != null) {
+                System.out.println(Arrays.asList(roomRegister).indexOf(room) + ": " + room);
+            }
+        }
+
         sc.close();
     }
 
